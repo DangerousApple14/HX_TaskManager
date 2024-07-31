@@ -1,0 +1,16 @@
+version: '1.0'
+
+services:
+  web:
+    build: .
+    command: flask run --host=0.0.0.0
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/code
+    environment:
+      FLASK_ENV: development
+      DATABASE_URL: sqlite:///users.db
+
+volumes:
+  db_data:
