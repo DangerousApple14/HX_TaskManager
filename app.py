@@ -9,6 +9,34 @@ from pytz import utc
 from helpers import *
 from keys import SECRET_KEY
 
+"""
+users.db .schema:
+     
+CREATE TABLE tasks (user_id INTEGER,
+task_n INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+task_title TEXT NOT NULL,
+task TEXT,
+task_dt TEXT NOT NULL,
+deadline TEXT NOT NULL,
+reminders1 TEXT,
+reminders2 TEXT,
+reminders3 TEXT,
+reminders4 TEXT,
+reminders5 TEXT,
+send INTEGER DEFAULT 0,
+FOREIGN KEY(user_id) REFERENCES users(id));
+
+CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+timezone TEXT DEFAULT "Etc/GMT",
+token TEXT,
+username TEXT NOT NULL,
+hash TEXT NOT NULL,
+mail TEXT,
+verified INTEGER DEFAULT 0,
+token_time TEXT);
+"""
+
+
 class Config:   # Asked ChatGPT for this class
     SCHEDULER_API_ENABLED = True
     JOBS_TIMEZONE = 'UTC'
