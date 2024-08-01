@@ -8,6 +8,7 @@ from pytz import utc
 
 from helpers import *
 from keys import SECRET_KEY
+from keep_alive import keep_alive
 
 """
 users.db .schema:
