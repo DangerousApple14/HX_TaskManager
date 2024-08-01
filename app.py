@@ -37,6 +37,7 @@ verified INTEGER DEFAULT 0,
 token_time TEXT);
 """
 
+keep_alive()
 
 class Config:   # Asked ChatGPT for this class
     SCHEDULER_API_ENABLED = True
