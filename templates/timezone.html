@@ -3,6 +3,12 @@ block body %}
 
 <div class="box" style="height: 550px; position: absolute; left: 0;">
   <h1>Select your timezone (default: UTC):</h1>
+  <p>
+    Notes: Etc/GMT+n means n hours behind GMT.<br />(The opposite applies for
+    Etc/GMT-n).<br /><br />Options including Continent/Country already account
+    for DST (Daylight Saving Time),<br />thus input your timezone without
+    considering DST.
+  </p>
   <form action="/set_timezone" method="post">
     <select name="timezone" class="form-control">
       <!-- Asked ChatGPT to make all the timezone options -->
