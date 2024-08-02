@@ -38,23 +38,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Container for exp bars */
-.container {
-  width: 100%;
-  background-color: #ddd;
-}
-
-.bar {
-  text-align: right;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: white; /* probably won't write anything inside the bar but you never know */
-}
-
-.lvl {
-  background-color: #91242c;
-}
-
 textarea {
   width: 100%;
   height: 150px;
