@@ -386,11 +386,13 @@ def verify_email():
     user_id = session['user_id']
 
     user_mail = db.execute("SELECT mail FROM users WHERE id = ?", (user_id,)).fetchone()
-    is_verified = db.execute("SELECT verified FROM users WHERE id = ?", (user_id,)).fetchone()
     if not user_mail:  # Mail not set
         return redirect("/set_email")
-    elif is_verified[0]:  # Already verified
+
+    is_verified = db.execute("SELECT verified FROM users WHERE id = ?", (user_id,)).fetchone()
+    if is_verified[0]:  # Already verified
         return render_template("verifyEmail.html", verified=True)
+
     if request.method == "POST":
         token = request.form.get("token")
         database_token, token_time = db.execute("SELECT token, token_time FROM users WHERE id = ?", (user_id,)).fetchone()
