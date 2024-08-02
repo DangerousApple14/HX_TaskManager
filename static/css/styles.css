@@ -95,6 +95,15 @@ textarea {
   color: #850b13;
   word-wrap: break-word; /* Wrap long words */
   animation: slideIn 1s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.animated-box ol {
+  text-align: left;
 }
 
 @keyframes slideIn {
