@@ -75,6 +75,9 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
+@app.route("/about")
+def tutorial():
+     return render_template("tutorial.html")
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
