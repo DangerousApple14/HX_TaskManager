@@ -31,7 +31,7 @@ body {
   line-height: 1.5;
   text-align: center;
   color: #fff;
-  font: Roboto Condensed Bold;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 * {
@@ -84,7 +84,7 @@ textarea {
 
 .animated-box {
   max-width: 80%;
-  height: 300px; /* Set a fixed height for the box */
+  min-height: 400px; /* Allows box to grow with content */
   overflow-y: auto; /* Adds a vertical scrollbar when content overflows */
   overflow-x: hidden; /* Hide horizontal scrollbar */
   font-weight: 500;
